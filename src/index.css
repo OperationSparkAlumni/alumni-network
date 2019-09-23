@@ -1,6 +1,21 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+}
+
+@font-face {
+  font-family: 'Atami-Regular';
+  src: local('Atami-Regular') url('./fonts/Atami-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Atami-Bold';
+  src: local('Atami-Bold') url('./fonts/Atami-Bold.otf') format('opentype');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: 'Source Sans Pro', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
