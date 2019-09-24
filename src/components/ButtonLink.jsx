@@ -1,5 +1,6 @@
 import { Link } from '@reach/router';
 import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 
 import colors from '../common/colors';
 
@@ -23,6 +24,22 @@ const buttonStyle = css`
 
 export const ButtonLink = styled(Link)`${buttonStyle}`;
 
+ButtonLink.propTypes = {
+  bgColor: PropTypes.string,
+  shadowColor: PropTypes.string,
+  textcolor: PropTypes.string,
+  large: PropTypes.bool,
+  fontWeight: PropTypes.number,
+};
+
+ButtonLink.defaultProps = {
+  bgColor: colors.lightPurple,
+  shadowColor: colors.yellow,
+  textcolor: colors.white,
+  large: false,
+  fontWeight: 700,
+};
+
 export const Button = styled.button`
   ${buttonStyle}
   border: none;
@@ -31,5 +48,21 @@ export const Button = styled.button`
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 `;
+
+Button.propTypes = {
+  bgColor: PropTypes.string,
+  shadowColor: PropTypes.string,
+  textcolor: PropTypes.string,
+  large: PropTypes.bool,
+  fontWeight: PropTypes.number,
+};
+
+Button.defaultProps = {
+  bgColor: colors.lightPurple,
+  shadowColor: colors.yellow,
+  textcolor: colors.white,
+  large: false,
+  fontWeight: 700,
+};
 
 // export default ButtonLink;
