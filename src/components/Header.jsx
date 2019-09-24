@@ -6,6 +6,7 @@ import { useAuthContext } from '../common/AuthContext';
 import NavLink from './NavLink';
 import { Button } from './ButtonLink';
 import UserMenu from './UserMenu';
+import colors from '../common/colors';
 import logo from '../assets/logo.svg';
 
 const StyledHeader = styled.header`
@@ -17,6 +18,7 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
   `;
 
 const buttonContainerStyle = `
@@ -58,7 +60,9 @@ function Header() {
         </IsAuthDiv>
       ) : (
         <LoginButtonContainer>
-          <Button onClick={onLogin} color="yellow">Sign In</Button>
+          <Button onClick={onLogin} bgColor={colors.yellow} shadowColor={colors.lightPurple} textColor={colors.vDarkPurple}>
+            Sign In
+          </Button>
           <Button onClick={onLogin}>Sign Up</Button>
         </LoginButtonContainer>
       )}

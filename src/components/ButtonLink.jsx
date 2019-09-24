@@ -4,17 +4,14 @@ import styled, { css } from 'styled-components';
 import colors from '../common/colors';
 
 const buttonStyle = css`
-  background-color: ${({ color }) => {
-    if (color === 'yellow') return colors.yellow;
-    if (color === 'white') return colors.white;
-    else return colors.lightPurple;
-  }};
+  background-color: ${({ bgColor }) => bgColor ? bgColor : colors.lightPurple };
   border-radius: 5px;
-  box-shadow: .25rem .25rem 0 ${({ color }) => color === 'yellow' ? colors.lightPurple : colors.yellow};
-  color: ${({ color }) => color === 'yellow' || color === 'white' ? colors.darkPurple : colors.white};
-  font-weight: 600;
+  box-shadow: .25rem .25rem 0 ${({ shadowColor }) => shadowColor ? shadowColor : colors.yellow};
+  color: ${({ textColor }) => textColor ? textColor : colors.white};
+  font-size: ${({ large }) => large ? '2rem' : '1rem'};
+  font-weight: ${({ fontWeight }) => fontWeight ? fontWeight : 600};
   min-width: 4.5rem;
-  padding: .75rem;
+  padding: ${({ large }) => large ? '1rem' : '.75rem'};
   text-align: center;
   text-decoration: none;
   transition: 250ms ease-in;
@@ -33,7 +30,6 @@ export const Button = styled.button`
   font-family: source-sans-pro, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  font-size: 1rem;
 `;
 
 // export default ButtonLink;
