@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Atami-Regular';
-  src: local('Atami-Regular') url('./fonts/Atami-Regular.otf') format('opentype');
+  src: local('Atami-Regular'), url('./fonts/Atami-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Atami-Bold';
-  src: local('Atami-Bold') url('./fonts/Atami-Bold.otf') format('opentype');
+  src: local('Atami-Bold'), url('./fonts/Atami-Bold.otf') format('opentype');
 }
 
 body {
