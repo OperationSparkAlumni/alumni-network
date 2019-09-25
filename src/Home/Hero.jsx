@@ -5,7 +5,7 @@ import { Column, Row, Heading } from '../common/styles';
 import colors from '../common/colors';
 import hero from '../assets/hero.png';
 import { Button } from '../components/ButtonLink';
-import HalleBot from '../assets/HalleBot.png';
+import HalleBot from '../assets/HalleBot.svg';
 
 const HeroDiv = styled.div`
   background-image: url(${hero});
@@ -26,9 +26,9 @@ const StyledRow = styled(Row)`
 const HalleBotImg = styled.img`
   height: auto;
   position: absolute;
-  right: 0%;
-  top: 25%;
-  width: 30vw;
+  right: 1%;
+  top: 40%;
+  width: 25vw;
 `;
 
 const Hero = () => (
