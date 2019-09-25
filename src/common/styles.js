@@ -50,7 +50,6 @@ Column.defaultProps = {
 
 const Heading = styled.h1`
   color: ${({ color }) => color};
-  font-family: Atami-Bold;
   font-size: ${({ fontSize }) => fontSize};
   margin: ${({ margin }) => margin};
   text-shadow: .25rem .25rem 0 ${({ textShadowColor }) => textShadowColor};
