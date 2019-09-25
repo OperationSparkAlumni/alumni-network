@@ -18,7 +18,6 @@ const StyledColumn = styled(Column)`
   margin-top: ${({ marginTop }) => marginTop}vw;
   padding: 4vw 0;
   width: 25vw;
-  z-index: 2;
 `;
 
 const StyledImg = styled.img`
