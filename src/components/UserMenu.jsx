@@ -5,6 +5,7 @@ import { useAuthContext } from '../common/AuthContext';
 import colors from '../common/colors';
 import { Column } from '../common/styles';
 import caret from '../assets/caret.svg';
+import PersonBubble from '../components/PersonBubble';
 
 const StyledColumn = styled(Column)`
   box-sizing: border-box;
@@ -20,14 +21,6 @@ const StyledButton = styled.button`
   display: flex;
   font-size: .85rem;
   font-weight: 600;
-`;
-
-const ProfileImg = styled.img`
-  border: .25rem solid ${colors.lightPurple};
-  border-radius: 50%;
-  box-shadow: .35rem .35rem 0 ${colors.translucentLightPurple};
-  height: 4rem;
-  width: auto;
 `;
 
 const AnimatedImg = styled.img`
@@ -85,7 +78,7 @@ const UserMenu = () => {
   return (
     <StyledColumn>
       <StyledButton onClick={toggleExpanded}>
-        <ProfileImg src={image} alt="logged-in user" />
+        <PersonBubble image={image} alt="logged-in user" />
         <AnimatedImg src={caret} alt="caret" expanded={expanded} />
       </StyledButton>
       {expanded && (
