@@ -30,3 +30,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Atami-Bold";
   font-weight: normal;
 }
+
+p {
+  margin: 0 0 2.5rem 0;
+  white-space: pre-wrap;
+}
