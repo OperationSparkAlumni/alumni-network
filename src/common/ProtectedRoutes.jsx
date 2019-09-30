@@ -5,6 +5,7 @@ import { useAuthContext } from './AuthContext';
 import Dashboard from '../Dashboard';
 import Directory from '../Directory';
 import Jobs from '../Jobs';
+import Profile from '../Profile';
 
 const ProtectedRoutes = () => {
   const { isAuth } = useAuthContext();
@@ -18,7 +19,9 @@ const ProtectedRoutes = () => {
       {!isAuth && <Redirect from="/alumni-directory" to="/" />}
       <Directory path="/alumni-directory" />
       {!isAuth && <Redirect from="/jobs" to="/" />}
-      <Jobs path="jobs" />
+      <Jobs path="/jobs" />
+      {!isAuth && <Redirect from="/profile" to="/" />}
+      <Profile path="/profile/:userId" />
     </Router>
   );
 };
