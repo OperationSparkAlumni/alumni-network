@@ -7,7 +7,8 @@ const colors = {
   darkPurple: '#5F2C82',
   vDarkPurple: '#2E1C36',
   translucentYellow: '#F3C70075',
-  translucentLightPurple: '#BB7CE560'
+  translucentLightPurple: '#BB7CE560',
+  translucentWhite: '#FFFFFF70',
 };
 
 export default colors;
