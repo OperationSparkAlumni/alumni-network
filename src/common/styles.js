@@ -1,52 +1,50 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import colors from './colors';
 
-const Row = styled.div`
+const flexStyles = css`
   align-items: ${({ alignItems }) => alignItems};
   display: flex;
+  flex: ${({ flex1 }) => flex1 ? '1' : 'initial'};
   justify-content: ${({ justifyContent }) => justifyContent};
   margin: ${({ margin }) => margin};
   padding: ${({ padding }) => padding};
+  width: ${({ width }) => width};
 `;
 
-Row.propTypes = {
+const flexPropTypes = {
   alignItems: PropTypes.oneOf(['stretch', 'flex-start', 'flex-end', 'center', 'baseline', 'initial']),
+  flex1: PropTypes.bool,
   justifyContent: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly', 'initial']),
   margin: PropTypes.string,
   padding: PropTypes.string,
+  width: PropTypes.string,
 };
 
-Row.defaultProps = {
+const flexDefaultProps = {
   alignItems: 'initial',
+  flex1: false,
   justifyContent: 'initial',
   margin: 'initial',
   padding: 'initial',
-};
+  width: 'initial',
+}
+
+const Row = styled.div`${flexStyles}`;
+
+Row.propTypes = flexPropTypes;
+
+Row.defaultProps = flexDefaultProps;
 
 const Column = styled.div`
-  align-items: ${({ alignItems }) => alignItems};
-  display: flex;
+  ${flexStyles}
   flex-direction: column;
-  justify-content: ${({ justifyContent }) => justifyContent};
-  margin: ${({ margin }) => margin};
-  padding: ${({ padding }) => padding};
 `;
 
-Column.propTypes = {
-  alignItems: PropTypes.oneOf(['stretch', 'flex-start', 'flex-end', 'center', 'baseline', 'initial']),
-  justifyContent: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly', 'initial']),
-  margin: PropTypes.string,
-  padding: PropTypes.string,
-};
+Column.propTypes = flexPropTypes;
 
-Column.defaultProps = {
-  alignItems: 'initial',
-  justifyContent: 'initial',
-  margin: 'initial',
-  padding: 'initial',
-};
+Column.defaultProps = flexDefaultProps;
 
 const Heading = styled.h1`
   color: ${({ color }) => color};
