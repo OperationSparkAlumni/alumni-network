@@ -25,7 +25,7 @@ const StyledImg = styled.img`
   width: auto;
 `;
 
-const StyledH3 = styled.h3`
+const StyledH2 = styled.h2`
   font-family: "Atami-bold";
   font-size: 3vw;
   margin: 0;
@@ -42,7 +42,7 @@ const StyledP = styled.p`
 const FeatureBubble = ({ icon, heading, caption, marginTop }) => (
   <StyledColumn marginTop={marginTop}>
     <StyledImg src={icon} alt="icon" />
-    <StyledH3>{heading}</StyledH3>
+    <StyledH2>{heading}</StyledH2>
     <StyledP>{caption}</StyledP>
   </StyledColumn>
 );
