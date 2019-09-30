@@ -12,7 +12,6 @@ const NavLink = (props) => (
         bgColor={match ? colors.yellow : colors.lightPurple}
         shadowColor={match ? colors.lightPurple : colors.yellow}
         textColor={match ? colors.vDarkPurple : colors.white}
-        fontWeight={600}
       />
     )}
   </Match>

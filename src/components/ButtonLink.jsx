@@ -5,14 +5,18 @@ import PropTypes from 'prop-types';
 import colors from '../common/colors';
 
 const buttonStyle = css`
-  background-color: ${({ bgColor }) => bgColor ? bgColor : colors.lightPurple };
+  background-color: ${({ bgColor }) => bgColor};
   border-radius: 5px;
-  box-shadow: .25rem .25rem 0 ${({ shadowColor }) => shadowColor ? shadowColor : colors.yellow};
-  color: ${({ textColor }) => textColor ? textColor : colors.white};
+  box-shadow: .25rem .25rem 0 ${({ shadowColor }) => shadowColor};
+  color: ${({ textColor }) => textColor};
   font-size: ${({ large }) => large ? '2rem' : '1rem'};
-  font-weight: ${({ fontWeight }) => fontWeight ? fontWeight : 600};
+  font-weight: ${({ fontWeight }) => fontWeight};
   min-width: 4.5rem;
-  padding: ${({ large }) => large ? '1rem' : '.75rem'};
+  padding: ${({ large, small }) => {
+    if (large) return '1rem';
+    if (small) return '.5rem';
+    return '.75rem';
+  }};
   text-align: center;
   text-decoration: none;
   transition: 250ms ease-in;
@@ -22,47 +26,41 @@ const buttonStyle = css`
   }
 `;
 
+const buttonPropTypes = {
+  bgColor: PropTypes.string,
+  fontWeight: PropTypes.string,
+  large: PropTypes.bool,
+  shadowColor: PropTypes.string,
+  small: PropTypes.bool,
+  textColor: PropTypes.string,
+};
+
+const buttonDefaultProps = {
+  bgColor: colors.lightPurple,
+  fontWeight: 'bold',
+  large: false,
+  shadowColor: colors.yellow,
+  small: false,
+  textColor: colors.white,
+};
+
 export const ButtonLink = styled(Link)`${buttonStyle}`;
 
-ButtonLink.propTypes = {
-  bgColor: PropTypes.string,
-  shadowColor: PropTypes.string,
-  textcolor: PropTypes.string,
-  large: PropTypes.bool,
-  fontWeight: PropTypes.number,
-};
+ButtonLink.propTypes = buttonPropTypes;
 
-ButtonLink.defaultProps = {
-  bgColor: colors.lightPurple,
-  shadowColor: colors.yellow,
-  textcolor: colors.white,
-  large: false,
-  fontWeight: 700,
-};
+ButtonLink.defaultProps = buttonDefaultProps;
 
 export const Button = styled.button`
   ${buttonStyle}
   border: none;
   cursor: pointer;
-  font-family: source-sans-pro, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: 'Source Sans Pro', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 `;
 
-Button.propTypes = {
-  bgColor: PropTypes.string,
-  shadowColor: PropTypes.string,
-  textcolor: PropTypes.string,
-  large: PropTypes.bool,
-  fontWeight: PropTypes.number,
-};
+Button.propTypes = buttonPropTypes;
 
-Button.defaultProps = {
-  bgColor: colors.lightPurple,
-  shadowColor: colors.yellow,
-  textcolor: colors.white,
-  large: false,
-  fontWeight: 700,
-};
+Button.defaultProps = buttonDefaultProps;
 
 // export default ButtonLink;
