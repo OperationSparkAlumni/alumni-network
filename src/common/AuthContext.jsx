@@ -11,8 +11,12 @@ const AuthContext = createContext();
 const AuthProvider = (props) => {
   const [isAuth, setIsAuth] = useState(false);
   const userData = {
-    nameFirst: 'Test',
-    nameLast: 'User',
+    id: 0,
+    name: {
+      first: 'Test',
+      last: 'User',
+      preferred: 'Test',
+    },
     image: anon,
   };
   const onLogin = () => setIsAuth(true);

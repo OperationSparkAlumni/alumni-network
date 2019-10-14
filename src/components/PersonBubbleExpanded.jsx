@@ -43,26 +43,33 @@ const StyledH3 = styled.h3`
   z-index: 2;
 `;
 
-const PersonBubbleExpanded = ({ image, linkedIn, gitHub, email, name }) => (
-  <Column>
-    <Row>
-      <StyledImg src={image} alt={name} />
-      <Column justifyContent="space-between" padding="2.75vw 0">
-        <StyledA href={linkedIn} target="_blank" rel="noopener noreferrer"><LinkImg src={linkedInLogo} alt="LinkedIn" /></StyledA>
-        <StyledA href={gitHub} target="_blank" rel="noopener noreferrer"><LinkImg src={gitHubLogo} alt="GitHub" /></StyledA>
-        <StyledA href={`mailto:${email}`} target="_blank" rel="noopener noreferrer"><LinkImg src={envelope} alt="email envelope" /></StyledA>
-      </Column>
-    </Row>
-    <StyledH3>{name}</StyledH3>
-  </Column>
-);
+const PersonBubbleExpanded = ({ image, linkedIn, gitHub, email, name }) => {
+  const { first, last } = name;
+  return (
+    <Column>
+      <Row>
+        <StyledImg src={image} alt={`${first} ${last}`} />
+        <Column justifyContent="space-between" padding="2.75vw 0">
+          <StyledA href={linkedIn} target="_blank" rel="noopener noreferrer"><LinkImg src={linkedInLogo} alt="LinkedIn" /></StyledA>
+          <StyledA href={gitHub} target="_blank" rel="noopener noreferrer"><LinkImg src={gitHubLogo} alt="GitHub" /></StyledA>
+          <StyledA href={`mailto:${email}`} target="_blank" rel="noopener noreferrer"><LinkImg src={envelope} alt="email envelope" /></StyledA>
+        </Column>
+      </Row>
+      <StyledH3>{first} {last}</StyledH3>
+    </Column>
+  );
+};
 
 PersonBubbleExpanded.propTypes = {
   image: PropTypes.string,
   linkedIn: PropTypes.string,
   gitHub: PropTypes.string,
   email: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.shape({
+    first: PropTypes.string,
+    last: PropTypes.string,
+    preferred: PropTypes.string,
+  }),
 };
 
 PersonBubbleExpanded.defaultProps = {
@@ -70,7 +77,11 @@ PersonBubbleExpanded.defaultProps = {
   linkedIn: 'https://www.linkedin.com/',
   gitHub: 'https://github.com/',
   email: 'abc@def.com',
-  name: 'Random Grad',
-}
+  name: {
+    first: 'Random', 
+    last: 'Grad',
+    preferred: 'Random',
+  },
+};
 
 export default PersonBubbleExpanded;
