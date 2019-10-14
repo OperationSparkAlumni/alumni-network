@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from '@reach/router';
 
 import { useAuthContext } from '../common/AuthContext';
 import colors from '../common/colors';
@@ -12,15 +13,28 @@ const StyledColumn = styled(Column)`
   position: relative;
 `;
 
+const linkStyle = `
+  font-size: .85rem;
+  font-weight: 600;
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  ${linkStyle};
+  text-decoration: none;
+`;
+
 const StyledButton = styled.button`
+  ${linkStyle};
   align-items: center;
   background: none;
   border: none;
   color: ${colors.white};
   cursor: pointer;
   display: flex;
-  font-size: .85rem;
-  font-weight: 600;
+  font-family: Source Sans Pro;
 `;
 
 const AnimatedImg = styled.img`
@@ -73,7 +87,7 @@ const UserMenu = () => {
   const [expanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded(!expanded);
   const { userData, onLogout } = useAuthContext();
-  const { image } = userData;
+  const { id, image } = userData;
 
   return (
     <StyledColumn>
@@ -83,7 +97,7 @@ const UserMenu = () => {
       </StyledButton>
       {expanded && (
         <NavMenu>
-          <StyledButton>My profile</StyledButton>
+          <StyledLink to={`/profile/${id}`}>My profile</StyledLink>
           <Line />
           <StyledButton>Settings</StyledButton>
           <Line />
