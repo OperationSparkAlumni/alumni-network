@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import Header from './Header';
 import Footer from './Footer';
+import PublicRoutes from '../common/PublicRoutes';
+import ProtectedRoutes from '../common/ProtectedRoutes';
 import colors from '../common/colors';
 import { useAuthContext } from '../common/AuthContext';
 
@@ -26,13 +28,15 @@ const AppContent = styled.div`
   padding: 8rem 3rem 3rem;
 `;
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const { isAuth } = useAuthContext();
 
   return (
     <AppContainer isAuth={isAuth}>
       <Header />
-      <AppContent>{children}</AppContent>
+      <AppContent>
+        {isAuth ? <ProtectedRoutes /> : <PublicRoutes />}
+      </AppContent>
       <Footer />
     </AppContainer>
   );
