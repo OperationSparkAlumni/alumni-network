@@ -11,6 +11,8 @@ import NewAlumni from './NewAlumni';
 import FeaturedJob from './FeaturedJob';
 import Newsletter from './Newsletter';
 
+import featuredGrad from '../mockedData/featuredGrad';
+
 const SpeechBubble = styled.div`
   background-color: ${colors.white};
   border-radius: 5rem;
@@ -54,21 +56,21 @@ const StyledRow = styled(Row)`
 function Dashboard() {
   const [ newsletters, expandNewsletter ] = useNewsletters();
   const { userData } = useAuthContext();
-  const { nameFirst, nameLast } = userData;
+  const { name: { first, last } } = userData;
 
   return (
     <Column>
       <Row justifyContent="center">
         <div style={{ position: "relative"}}>
           <SpeechBubble>
-            <Heading fontSize="2.5vw" color={colors.darkPurple}>Hello, {`${nameFirst} ${nameLast}`}!</Heading>
+            <Heading fontSize="2.5vw" color={colors.darkPurple}>Hello, {`${first} ${last}`}!</Heading>
           </SpeechBubble>
         </div>
         <HalleBotImg src={HalleBot} alt="HalleBot" />
       </Row>
       <StyledRow justifyContent="space-evenly" margin="-9vw 0 0 0">
         <Column margin="-9vw 0 0 0">
-          <FeaturedGrad />
+          <FeaturedGrad grad={featuredGrad} />
           <NewAlumni />
           <FeaturedJob />
         </Column>
