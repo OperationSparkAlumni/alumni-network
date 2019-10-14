@@ -7,7 +7,7 @@ const newsletterData = [
     latest: true,
     title: 'Really Cool Title',
     author: {
-        id: '12345678',
+        id: '3',
         name: 'Jacqueline Asong',
         image: anon,
     },
@@ -25,7 +25,7 @@ const newsletterData = [
     latest: false,
     title: 'Another Really Cool Title',
     author: {
-        id: '12345678',
+        id: '3',
         name: 'Jacqueline Asong',
         image: anon,
     },
