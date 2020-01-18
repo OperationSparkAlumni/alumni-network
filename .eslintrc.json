@@ -20,7 +20,8 @@
         "react"
     ],
     "rules": {
-        "comma-dangle": ["error", "always"],
-        "quotes": ["error", "backtick"]
+        "comma-dangle": ["error", "only-multiline"],
+        "quotes": ["error", "backtick"],
+        "eol-last": ["error", "always"]
     }
 }
