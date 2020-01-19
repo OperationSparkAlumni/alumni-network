@@ -21,7 +21,9 @@
     ],
     "rules": {
         "comma-dangle": ["error", "only-multiline"],
-        "quotes": ["error", "backtick"],
-        "eol-last": ["error", "always"]
+        "quotes": ["error", "single"],
+        "eol-last": ["error", "always"],
+        "no-param-reassign": ["error", {"props": false}],
+        "no-console": "off"
     }
 }
