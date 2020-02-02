@@ -8,7 +8,7 @@ const FeaturedGrad = ({ grad }) => {
   const { image, name, links, description } = grad;
   return (
     <PersonContainer heading="Featured Grad" image={image} name={name} links={links}>
-      <p>{description}</p>  
+      <p>{description}</p>
     </PersonContainer>
   );
 };
@@ -47,7 +47,7 @@ FeaturedGrad.defaultProps = {
       },
     },
     name: {
-      first: 'Random', 
+      first: 'Random',
       last: 'Grad',
       preferred: 'Random',
     },

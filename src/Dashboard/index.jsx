@@ -61,7 +61,7 @@ function Dashboard() {
   return (
     <Column>
       <Row justifyContent="center">
-        <div style={{ position: "relative"}}>
+        <div style={{ position: 'relative' }}>
           <SpeechBubble>
             <Heading fontSize="2.5vw" color={colors.darkPurple}>Hello, {`${first} ${last}`}!</Heading>
           </SpeechBubble>
@@ -75,8 +75,12 @@ function Dashboard() {
           <FeaturedJob />
         </Column>
         <Column>
-          {newsletters.map(newsletter => (
-            <Newsletter newsletterIssue={newsletter} expandNewsletter={expandNewsletter} key={newsletter.id}  />
+          {newsletters.map((newsletter) => (
+            <Newsletter
+              newsletterIssue={newsletter}
+              expandNewsletter={expandNewsletter}
+              key={newsletter.id}
+            />
           ))}
         </Column>
       </StyledRow>

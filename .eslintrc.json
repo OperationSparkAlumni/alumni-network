@@ -24,6 +24,11 @@
         "quotes": ["error", "single"],
         "eol-last": ["error", "always"],
         "no-param-reassign": ["error", {"props": false}],
-        "no-console": "off"
+        "no-console": "off",
+        "object-curly-newline": "off",
+        "arrow-body-style": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/no-array-index-key": "off",
+        "array-bracket-spacing": "off"
     }
 }
