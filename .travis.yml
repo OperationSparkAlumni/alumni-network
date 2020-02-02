@@ -3,5 +3,5 @@ node_js:
   - node
   
 scripts:
-  - npm run lint
+  # - npm run lint
   - npm run build
