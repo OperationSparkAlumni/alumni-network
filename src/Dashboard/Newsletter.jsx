@@ -45,7 +45,7 @@ const Newsletter = ({ newsletterIssue, expandNewsletter }) => {
   const { name, image } = author;
 
   return (
-    <Container large heading={latest ? 'Alumni Newsletter' : '' }>
+    <Container large heading={latest ? 'Alumni Newsletter' : ''}>
       <Row padding="0 0 1.5rem 0" alignItems="center">
         <PersonBubble id={author.id} image={image} />
         <Column width="100%" padding="0 0 0 1.5rem">
@@ -92,6 +92,7 @@ Newsletter.propTypes = {
     contents: PropTypes.string,
     preview: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
+    id: PropTypes.number
   }),
   expandNewsletter: PropTypes.func,
 };
