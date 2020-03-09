@@ -7,9 +7,9 @@ const newsletterData = [
     latest: true,
     title: 'Really Cool Title',
     author: {
-        id: '3',
-        name: 'Jacqueline Asong',
-        image: anon,
+      id: '3',
+      name: 'Jacqueline Asong',
+      image: anon,
     },
     date: 'September, 2019',
     contents: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in nibh mauris cursus mattis. Elementum pulvinar etiam non quam lacus suspendisse. Justo nec ultrices dui sapien eget.\n
@@ -25,9 +25,9 @@ const newsletterData = [
     latest: false,
     title: 'Another Really Cool Title',
     author: {
-        id: '3',
-        name: 'Jacqueline Asong',
-        image: anon,
+      id: '3',
+      name: 'Jacqueline Asong',
+      image: anon,
     },
     date: 'August, 2019',
     preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in nibh mauris cursus mattis. Elementum pulvinar etiam non quam lacus suspendisse. Justo nec ultrices dui sapien eget.',

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import newsletterData from '../mockedData/newsletters';
 
-function useNewsletters () {
+function useNewsletters() {
   const [ newsletters, setNewsletters ] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function useNewsletters () {
       return newsletter;
     });
     setNewsletters(updatedNewsletters);
-  }
+  };
 
   return [newsletters, expandNewsletter];
 }

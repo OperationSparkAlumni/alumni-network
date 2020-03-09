@@ -15,6 +15,6 @@ const PublicRoutes = () => {
       <Home path="/" />
     </Router>
   );
-}
+};
 
 export default PublicRoutes;

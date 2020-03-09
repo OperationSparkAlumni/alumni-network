@@ -78,7 +78,7 @@ PersonBubbleExpanded.defaultProps = {
   gitHub: 'https://github.com/',
   email: 'abc@def.com',
   name: {
-    first: 'Random', 
+    first: 'Random',
     last: 'Grad',
     preferred: 'Random',
   },

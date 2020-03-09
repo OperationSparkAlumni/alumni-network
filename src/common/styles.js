@@ -6,7 +6,7 @@ import colors from './colors';
 const flexStyles = css`
   align-items: ${({ alignItems }) => alignItems};
   display: flex;
-  flex: ${({ flex1 }) => flex1 ? '1' : 'initial'};
+  flex: ${({ flex1 }) => (flex1 ? '1' : 'initial')};
   justify-content: ${({ justifyContent }) => justifyContent};
   margin: ${({ margin }) => margin};
   padding: ${({ padding }) => padding};
@@ -29,7 +29,7 @@ const flexDefaultProps = {
   margin: 'initial',
   padding: 'initial',
   width: 'initial',
-}
+};
 
 const Row = styled.div`${flexStyles}`;
 

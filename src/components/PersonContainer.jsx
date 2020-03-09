@@ -23,7 +23,13 @@ const PersonContainer = ({ heading, image, name, links, quickFacts, children }) 
   const { displayName, url } = website;
   return (
     <Container heading={heading}>
-      <PersonBubbleExpanded image={image} linkedIn={linkedIn} gitHub={gitHub} email={email} name={name} />
+      <PersonBubbleExpanded
+        image={image}
+        linkedIn={linkedIn}
+        gitHub={gitHub}
+        email={email}
+        name={name}
+      />
       <StyledDiv>
         <QuickFact caption="Cohort" fact={cohort} />
         <QuickFact caption="Company" fact={company} />
@@ -66,7 +72,7 @@ PersonContainer.defaultProps = {
   heading: '',
   image: anon,
   name: {
-    first: 'Random', 
+    first: 'Random',
     last: 'Grad',
     preferred: 'Random',
   },
