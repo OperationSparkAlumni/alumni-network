@@ -45,7 +45,12 @@ const Hero = () => (
         &nbsp;&nbsp;&nbsp;Alumni Network
       </Heading>
       <StyledRow>
-        <Button large bgColor={colors.yellow} shadowColor={colors.white} textColor={colors.vDarkPurple}>
+        <Button
+          large
+          bgColor={colors.yellow}
+          shadowColor={colors.white}
+          textColor={colors.vDarkPurple}
+        >
           Join today
         </Button>
         <HalleBotImg src={HalleBot} alt="HalleBot, the Operation Spark mascot" />

@@ -6,7 +6,7 @@ import { useAuthContext } from '../common/AuthContext';
 import colors from '../common/colors';
 import { Column } from '../common/styles';
 import caret from '../assets/caret.svg';
-import PersonBubble from '../components/PersonBubble';
+import PersonBubble from './PersonBubble';
 
 const StyledColumn = styled(Column)`
   box-sizing: border-box;
@@ -41,7 +41,7 @@ const AnimatedImg = styled.img`
   padding-left: .25rem;
   padding-right: .25rem;
   transition: 250ms ease-in;
-  transform: ${props => props.expanded ? 'rotate(180deg)' : 'rotate(0deg)'}
+  transform: ${(props) => (props.expanded ? 'rotate(180deg)' : 'rotate(0deg)')}
 `;
 
 const NavMenu = styled.nav`

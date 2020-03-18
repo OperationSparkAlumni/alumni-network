@@ -26,7 +26,7 @@ const buttonContainerStyle = `
   display: flex;
   justify-content: space-between;
 `;
-  
+
 const IsAuthDiv = styled.div`
   ${buttonContainerStyle}
   width: 100%;
@@ -60,7 +60,12 @@ function Header() {
         </IsAuthDiv>
       ) : (
         <LoginButtonContainer>
-          <Button onClick={onLogin} bgColor={colors.yellow} shadowColor={colors.lightPurple} textColor={colors.vDarkPurple}>
+          <Button
+            onClick={onLogin}
+            bgColor={colors.yellow}
+            shadowColor={colors.lightPurple}
+            textColor={colors.vDarkPurple}
+          >
             Sign In
           </Button>
           <Button onClick={onLogin}>Sign Up</Button>

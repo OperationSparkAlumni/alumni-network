@@ -11,18 +11,17 @@ const ProtectedRoutes = () => {
   const { isAuth } = useAuthContext();
 
   if (!isAuth) {
-    navigate('/');
-  } else {
-    return (
-      <Router>
-        <Redirect from="/" to="/dashboard" />
-        <Dashboard path="/dashboard" />
-        <Directory path="/alumni-directory" />
-        <Jobs path="/jobs" />
-        <Profile path="/profile/:userId" />
-      </Router>
-    );
+    return navigate('/');
   }
+  return (
+    <Router>
+      <Redirect from="/" to="/dashboard" />
+      <Dashboard path="/dashboard" />
+      <Directory path="/alumni-directory" />
+      <Jobs path="/jobs" />
+      <Profile path="/profile/:userId" />
+    </Router>
+  );
 };
 
 export default ProtectedRoutes;

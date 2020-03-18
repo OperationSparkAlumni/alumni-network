@@ -10,6 +10,10 @@ const StyledButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+  :active, :focus {
+    outline: none !important;
+    box-shadow: none;
+  }
 `;
 
 const StyledImg = styled.img`
@@ -32,13 +36,15 @@ const PersonBubble = ({ id, image, alt }) => (
 );
 
 PersonBubble.propTypes = {
+  id: PropTypes.number,
   image: PropTypes.string,
   alt: PropTypes.string,
 };
 
 PersonBubble.defaultProps = {
+  id: null,
   image: anon,
-  alt: "Anonymous user",
+  alt: 'Anonymous user',
 };
 
 export default PersonBubble;

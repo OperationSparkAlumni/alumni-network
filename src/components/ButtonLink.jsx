@@ -9,7 +9,7 @@ const buttonStyle = css`
   border-radius: 5px;
   box-shadow: .25rem .25rem 0 ${({ shadowColor }) => shadowColor};
   color: ${({ textColor }) => textColor};
-  font-size: ${({ large }) => large ? '2rem' : '1rem'};
+  font-size: ${({ large }) => (large ? '2rem' : '1rem')};
   font-weight: ${({ fontWeight }) => fontWeight};
   min-width: 4.5rem;
   padding: ${({ large, small }) => {

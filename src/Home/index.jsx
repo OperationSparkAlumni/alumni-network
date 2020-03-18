@@ -65,14 +65,19 @@ function Home() {
           icon={loudspeaker}
           heading="Be Heard"
           caption="Be among the first to provide useful feedback to the alumni board"
-          marginTop={-2}  
+          marginTop={-2}
         />
       </Row>
       <Row justifyContent="center">
         <CallToAction>
           <StyledH2>Join Today!</StyledH2>
           <Row alignItems="center" justifyContent="flex-end">
-            <Button large bgColor={colors.yellow} shadowColor={colors.white} textColor={colors.vDarkPurple}>
+            <Button
+              large
+              bgColor={colors.yellow}
+              shadowColor={colors.white}
+              textColor={colors.vDarkPurple}
+            >
               Sign up
             </Button>
             <StyledSpan>
